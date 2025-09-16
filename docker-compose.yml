@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  tts:
+    build: .
+    container_name: tts
+    volumes:
+      - .:/app
+    environment:
+      - TZ=Asia/Seoul
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    network_mode: bridge

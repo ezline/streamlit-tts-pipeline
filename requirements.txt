@@ -1,0 +1,12 @@
+pydub
+librosa
+numpy
+pandas
+streamlit
+google-cloud-texttospeech
+psycopg2-binary
+openai
+flask
+requests
+fastapi
+uvicorn
